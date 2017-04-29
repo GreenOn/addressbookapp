@@ -1,0 +1,29 @@
+{
+  "name": "addressbookproject",
+  "version": "1.0.0",
+  "description": "App to import / export email id's and send emails using sendgrid API.",
+  "main": "index.js",
+  "scripts": {
+    "start": "index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GreenOn/addressbookapp.git"
+  },
+  "keywords": [
+    "addressbook",
+    "sendgrid"
+  ],
+  "author": "Pramod Vadrevu & Erin Yener",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GreenOn/addressbookapp/issues"
+  },
+  "homepage": "https://github.com/GreenOn/addressbookapp#readme",
+  "dependencies": {
+    "mongoose": "^4.9.6",
+    "restify": "^4.3.0",
+    "sendgrid": "^5.0.1"
+  }
+}
