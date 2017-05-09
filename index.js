@@ -13,6 +13,11 @@ server.get('/about', restify.serveStatic({
   file: 'about.html'
 }));
 
+server.get('/login', restify.serveStatic({
+  directory: './client',
+  file: 'login.html'
+}));
+
 server.get(/\/?.*/, restify.serveStatic({
   directory: './client',
   default:'index.html'
