@@ -8,15 +8,15 @@ const port = 8080;
 const dirname = './client';
 
 
-server.get('/about', restify.serveStatic({
-  directory: './client',
-  file: 'about.html'
-}));
+// server.get('/about', restify.serveStatic({
+//   directory: './client',
+//   file: 'about.html'
+// }));
 
-server.get('/login', restify.serveStatic({
-  directory: './client',
-  file: 'login.html'
-}));
+// server.get('/login', restify.serveStatic({
+//   directory: './client',
+//   file: 'login.html'
+// }));
 
 server.get(/\/?.*/, restify.serveStatic({
   directory: './client',

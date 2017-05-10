@@ -1,28 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="addBookApp">
 <head>
 <title>Mass communication app</title>
- <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous">
-  </script> 
-	<script> 
-	$(function(){
-	  $("#header").load("nav_auth.html"); 
-	  $("#footer").load("footer.html"); 
-	});
-</script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-route.min.js"></script>
+ <script src="script.js"></script>
 </head>
-<body>
-<div id="header"></div>
-<div class="jumbotron">
-<div class="container"> 
-  <h1>Welcome!</h1>
-  <p>Use this mass-communication app to import / export your email list and send email to the groups. </p>
-  <p><a class="btn btn-primary btn-lg" href="/about" role="button">Learn more</a></p>
-  </div>
+<body ng-controller="mainController">
+<header id="topHead" ng-include="'nav.html'"></header>
+
+<!-- MAIN CONTENT AND INJECTED VIEWS -->
+<div id="main">
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view></div>
+
 </div>
-<div id="footer"></div>
+<footer ng-include="'footer.html'"></footer>
 </body>
 </html>
