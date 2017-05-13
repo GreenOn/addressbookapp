@@ -1,5 +1,4 @@
 // script.js
-
     // create the module and name it addBookApp
         // also include ngRoute for all our routing needs
     var addBookApp = angular.module('addBookApp', ['ngRoute']);
@@ -20,10 +19,15 @@
                 controller  : 'aboutController'
             })
 
-            // route for the contact page
+            // route for the login page
             .when('/login', {
                 templateUrl : 'login.html',
                 controller  : 'loginController'
+            })
+            // route for the register page
+            .when('/register', {
+                templateUrl : 'register.html',
+                controller  : 'angRegister'
             });
     });
 
@@ -38,5 +42,8 @@
     });
 
     addBookApp.controller('loginController', function($scope) {
+       // $scope.message = 'login page';
+    });
+        addBookApp.controller('angRegister', function($scope) {
        // $scope.message = 'login page';
     });
