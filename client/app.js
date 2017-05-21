@@ -1,10 +1,10 @@
 // script.js
     // create the module and name it addBookApp
         // also include ngRoute for all our routing needs
-    var addBookApp = angular.module('addBookApp', ['ngRoute']);
+    var module = angular.module('addBookApp', ['ngRoute','ngResource','ngCookies', 'ngMessages']);
 
     // configure our routes
-    addBookApp.config(function ($routeProvider,$locationProvider) {
+    module.config(function ($routeProvider,$locationProvider) {
     $locationProvider.hashPrefix('');
     $routeProvider
             // route for the home page
@@ -22,28 +22,24 @@
             // route for the login page
             .when('/login', {
                 templateUrl : 'login.html',
-                controller  : 'loginController'
+                controller  : 'loginCtrl'
             })
             // route for the register page
             .when('/register', {
-                templateUrl : 'register.html',
+                templateUrl : 'registrationViews/register.html',
                 controller  : 'angRegister'
             });
     });
 
     // create the controller and inject Angular's $scope
-    addBookApp.controller('mainController', function($scope) {
+    module.controller('mainController', function($scope) {
         // create a message to display in our view
         //$scope.message = 'Main controller.';
     });
 
-    addBookApp.controller('aboutController', function($scope) {
+    module.controller('aboutController', function($scope) {
         //$scope.message = 'Look! I am an about page.';
     });
-
-    addBookApp.controller('loginController', function($scope) {
-       // $scope.message = 'login page';
-    });
-        addBookApp.controller('angRegister', function($scope) {
+    module.controller('angRegister', function($scope) {
        // $scope.message = 'login page';
     });

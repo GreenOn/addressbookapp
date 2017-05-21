@@ -1,17 +1,18 @@
 module = angular.module('angRegister', ['ngRoute', 'ngResource', 'ngCookies', 'ngMessages']);
 
 module.config(function($routeProvider, $locationProvider){
+	$locationProvider.hashPrefix('');
 	$routeProvider
 	.when('/', {
-		templateUrl: './register.html',
+		templateUrl: './registrationViews/register.html',
 		controller: 'registerCtrl'
 	})
 	.when('/success/:email', {
-		templateUrl: './success.html',
+		templateUrl: './registrationViews/success.html',
 		controller: 'successCtrl'
 	})
 	.when('/confirmed/:email', {
-		templateUrl: './confirmed.html',
+		templateUrl: './registrationViews/confirmed.html',
 		controller: 'successCtrl'
 	});
 });

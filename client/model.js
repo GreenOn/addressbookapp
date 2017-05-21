@@ -1,7 +1,8 @@
 module
 	.service('URL', function(){
-		this.rootURL = 'http://localhost:8080';
+		this.rootURL = 'http://localhost:8080/api';
 		this.generateURL = function(uri){
+			console.log("uri ", uri);
 			return this.rootURL + uri;
 		}
 	})

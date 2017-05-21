@@ -22,8 +22,13 @@
   },
   "homepage": "https://github.com/GreenOn/addressbookapp#readme",
   "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "jsonwebtoken": "^7.4.1",
     "mongoose": "^4.9.6",
+    "node-rest-client": "^3.1.0",
     "restify": "^4.3.0",
+    "restify-router": "^0.4.2",
     "sendgrid": "^5.0.1"
-  }
+  },
+  "devDependencies": {}
 }
