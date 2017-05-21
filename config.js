@@ -17,7 +17,7 @@ module.exports = {
 	verify_url: 'https://localhost:8080/api/verify/',
 	reset_url: 'https://dynos-editor.herokuapp.com/support/reset.html#?',
 	sendgrid_url: 'https://api.sendgrid.com/api/mail.send.json',
-	sendgrid_key: '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',
+	sendgrid_key: '',
 	sendgrid_email: 'dynosApp@gmail.com',
 	sendgrid_templates: template_ids
 }

@@ -10,13 +10,14 @@
  <script src="app.js"></script>
  <script src="login/controller.js"></script>
  <script src="session.js"></script>
+ <script src="home/controller.js"></script>  
  <script src="model.js"></script> 
 </head>
-<body ng-controller="mainController">
+<body>
 <div ng-if='isActiveSession'>
 	<header id="topHead" ng-include="'nav_auth.html'"></header>
 </div>
-<div ng-if='isActiveSession'>
+<div ng-if='!isActiveSession'>
 	<header id="topHead" ng-include="'nav.html'"></header>
 </div>
 <!-- MAIN CONTENT AND INJECTED VIEWS -->

@@ -10,7 +10,7 @@
             // route for the home page
             .when('/', {
                 templateUrl : 'home.html',
-                controller  : 'mainController'
+                controller  : 'homeCtrl'
             })
 
             // route for the about page
@@ -31,12 +31,7 @@
             });
     });
 
-    // create the controller and inject Angular's $scope
-    module.controller('mainController', function($scope) {
-        // create a message to display in our view
-        //$scope.message = 'Main controller.';
-    });
-
+    
     module.controller('aboutController', function($scope) {
         //$scope.message = 'Look! I am an about page.';
     });
