@@ -17,6 +17,7 @@ module
 		_globalSearch();
 	}
 	$scope.initTopNav = function(){
+		console.log("I am in initTopNav <= login controller.")
 		_topNav();
 	}
 	

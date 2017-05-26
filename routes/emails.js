@@ -11,10 +11,10 @@ module.exports = {
 			parameters: 
 			{
 				"to": email,
-				"subject": "Dynos",
+				"subject": "AddressBookApp",
 				"text": "-------",
 				"from": config.sendgrid_email,
-				"fromname": "Dynos Team",
+				"fromname": "AddressBookApp Team",
 				"x-smtpapi": null
 			},
 			headers: {
@@ -93,10 +93,10 @@ module.exports = {
 			parameters:
 			{
 				"to": email,
-				"subject": "Dynos",
+				"subject": "AddressBookApp",
 				"text": "--------",
 				"from": config.sendgrid_email,
-				"fromname": "Dynos Team",
+				"fromname": "AddressBookApp Team",
 				"x-smtpapi": null
 			},
 			headers: {
@@ -139,7 +139,7 @@ module.exports = {
 				"subject": "Welcome",
 				"text": "-------",
 				"from": config.sendgrid_email,
-				"fromname": "Dynos Team",
+				"fromname": "AddressBookApp Team",
 				"x-smtpapi": null
 			},
 			headers: {

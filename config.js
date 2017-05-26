@@ -1,7 +1,7 @@
 /*module.exports = {
-	secret: 'dynos_secret_87203#',
+	secret: 'AddressBookApp_secret_87203#',
 	sendgrid_key: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-	mongodb: 'mongodb://dynos:dyno2016#@ds011308.mongolab.com:11308/dynos'
+	mongodb: 'mongodb://AddressBookApp:dyno2016#@ds011308.mongolab.com:11308/AddressBookApp'
 }
 */
 var template_ids = {
@@ -12,23 +12,23 @@ var template_ids = {
 };
 
 module.exports = {
-	secret: 'dynos_secret_87203#',
+	secret: 'AddressBookApp_secret_87203#',
 	mongodb: 'mongodb://localhost/testing',
 	verify_url: 'https://localhost:8080/api/verify/',
-	reset_url: 'https://dynos-editor.herokuapp.com/support/reset.html#?',
+	reset_url: 'https://AddressBookApp-editor.herokuapp.com/support/reset.html#?',
 	sendgrid_url: 'https://api.sendgrid.com/api/mail.send.json',
-	sendgrid_key: '',
-	sendgrid_email: 'dynosApp@gmail.com',
+	sendgrid_key: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+	sendgrid_email: 'AddressBookAppApp@gmail.com',
 	sendgrid_templates: template_ids
 }
 
 // module.exports = {
-// 	secret: 'dynos_secret_87203#',
-// 	mongodb: 'mongodb://127.0.0.1:27017/dynos',
+// 	secret: 'AddressBookApp_secret_87203#',
+// 	mongodb: 'mongodb://127.0.0.1:27017/AddressBookApp',
 // 	verify_url: 'https://192.168.2.82:8080/api/verify/',
 // 	reset_url: 'http://192.168.2.82:8080/support/reset.html#?',
 // 	sendgrid_url: 'https://api.sendgrid.com/api/mail.send.json',
 // 	sendgrid_key: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-// 	sendgrid_email: 'dynosApp@gmail.com',
+// 	sendgrid_email: 'AddressBookAppApp@gmail.com',
 // 	sendgrid_templates: template_ids
 // } 

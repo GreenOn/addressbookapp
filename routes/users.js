@@ -35,7 +35,7 @@ router.post('/login', function(req, res){
 				});
 			}
 		}else{
-			res.status(404).json({
+			res.json(404,{
 				msg: 'Invalid credentials.'
 			});
 		}
@@ -90,7 +90,7 @@ router.get('/', authHelper.userTokenHandler, authHelper.adminTokenHandler, funct
 			console.log("Fetching user List successful");
 			console.log(arr_users);
 
-			res.status(200).json({
+			res.json(200,{
 				users: arr_users
 			});
 	});
@@ -104,13 +104,13 @@ router.get('/:user_oid', authHelper.userTokenHandler, function(req, res){
 			console.log("Fetching user successful");
 			console.log(user);
 
-			res.status(200).json(user);
+			res.json(200,user);
 		});
 });
 router.put('/:user_oid', authHelper.userTokenHandler, function(req, res){
 	var user_oid = req.params.user_oid;
 	if (user_oid == null || user_oid == undefined){
-		res.status(400).json({
+		res.json(400,{
 			msg: 'Need User Id.'
 		});
 		res.done();
@@ -120,14 +120,14 @@ router.put('/:user_oid', authHelper.userTokenHandler, function(req, res){
 		if (err) throw err;
 
 		if (num_affected == 0){
-			res.status(404).json({
+			res.json(404,{
 				msg: 'No User found.'
 			});
 		}else{
 			console.log("Updating User successful");
 			console.log(num_affected);
 
-			res.status(200).json({
+			res.json(200,{
 				msg: 'User updated.'
 			});
 		}
@@ -136,7 +136,7 @@ router.put('/:user_oid', authHelper.userTokenHandler, function(req, res){
 router.del('/:user_oid', authHelper.userTokenHandler, function(req, res){
 	var user_oid = req.params.user_oid;
 	if (user_oid == null || user_oid == undefined){
-		res.status(400).json({
+		res.json(400,{
 			msg: 'Need User Id.'
 		});
 		res.done();
@@ -146,7 +146,7 @@ router.del('/:user_oid', authHelper.userTokenHandler, function(req, res){
 		if (err) throw err;
 
 		if (user == null){
-			res.status(404).json({
+			res.json(404,{
 				msg: 'No User found.'
 			});
 		}else{
@@ -155,7 +155,7 @@ router.del('/:user_oid', authHelper.userTokenHandler, function(req, res){
 
 				console.log("Removing User successful");
 
-				res.status(200).json({
+				res.json(200,{
 					msg: 'User updated.'
 				});
 			});			

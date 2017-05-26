@@ -2,29 +2,49 @@
 <html ng-app="addBookApp">
 <head>
 <title>Mass communication app</title>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-route.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-resource.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.min.js"></script> 
  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-messages.min.js"></script> 
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+
  <script src="app.js"></script>
+ <script src="model.js"></script>  
+
  <script src="login/controller.js"></script>
- <script src="session.js"></script>
  <script src="home/controller.js"></script>  
- <script src="model.js"></script> 
+ <script src="mainController.js"></script>   
+ <script src="assets/script.js"></script>  
+ <script src="profile/controller.js"></script>
+  <script src="profile/successModalCtrl.js"></script>
+<script type="text/javascript" language="javascript">
+	module.value('_topNav', _topNav);
+</script> 
+ <script src="session.js"></script>
 </head>
-<body>
-<div ng-if='isActiveSession'>
-	<header id="topHead" ng-include="'nav_auth.html'"></header>
-</div>
+<body ng-controller = "mainCtrl">
+
+
 <div ng-if='!isActiveSession'>
-	<header id="topHead" ng-include="'nav.html'"></header>
+	<header id="topNav" class="topHead" ng-include="'nav.html'"></header>
+</div>
+<div ng-if='isActiveSession'>
+	<header id="topNav" class="topHead" ng-include="'nav_auth.html'"></header>
 </div>
 <!-- MAIN CONTENT AND INJECTED VIEWS -->
 <div id="main">
     <!-- angular templating -->
     <!-- this is where content will be injected -->
-    <div ng-view></div>
+
+    <div id="wrapper" ng-view></div>
 
 </div>
 <footer ng-include="'footer.html'"></footer>
